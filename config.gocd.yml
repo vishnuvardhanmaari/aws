@@ -35,5 +35,5 @@ pipelines:
                         - -c
                         - ls && ll && curl ifconfig.me
                       command: /bin/bash
-                      run_if: passed  
+                       
                    
