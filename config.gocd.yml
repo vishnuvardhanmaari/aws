@@ -15,7 +15,7 @@ pipelines:
         git: git@github.com:vishnuvardhanmaari/actions.git           
         shallow_clone: false
         auto_update: true
-        branch: vishnu
+        branch: master
     stages:
       - first-stage:
           fetch_materials: true
