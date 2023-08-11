@@ -37,8 +37,8 @@ pipelines:
                   command: /bin/bash
                 - exec:
                     arguments:
-                      -c 
-                      - pwd
+                      - -c 
+                      - echo "Hello hii vishnu"
                     command: /bin/bash 
                     run_if: failed
                       
