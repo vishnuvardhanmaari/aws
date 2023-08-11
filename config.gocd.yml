@@ -13,7 +13,7 @@ pipelines:
     materials:
       vishnu-integration:
         git: git@github.com:vishnuvardhanmaari/actions.git           
-        shallow_clone: true
+        shallow_clone: false
         auto_update: true
         branch: vishnu
     stages:
