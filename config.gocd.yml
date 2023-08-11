@@ -35,5 +35,9 @@ pipelines:
                         - -c
                         - ls && ll && curl ifconfig.me
                       command: /bin/bash
-                       
-                   
+                  - exec:
+                      arguments:
+                        -c 
+                        - pwd
+                      command: /bin/bash 
+                      run_if: failed
