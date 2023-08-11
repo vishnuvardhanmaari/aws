@@ -37,7 +37,7 @@ pipelines:
                     command: /bin/bash
                 - exec:
                     arguments:
-                      -c 
+                      - -c 
                       - pwd
                     command: /bin/bash 
                     run_if: failed
