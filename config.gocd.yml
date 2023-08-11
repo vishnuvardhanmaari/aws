@@ -12,7 +12,7 @@ pipelines:
     display_order: -1
     materials:
       vishnu-integration:
-        git: git@github.com/vishnuvardhanmaari/actions.git
+        git: git@github.com:vishnuvardhanmaari/actions.git           
         shallow_clone: true
         auto_update: true
         branch: vishnu
