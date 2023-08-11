@@ -33,7 +33,7 @@ pipelines:
                 - exec:
                     arguments:
                       - -c
-                      - "ls && ll && curl ifconfig.me"
+                      - " ls &&  curl ifconfig.me "
                     command: /bin/bash
                 - exec:
                     arguments:
