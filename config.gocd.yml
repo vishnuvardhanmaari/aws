@@ -31,14 +31,14 @@ pipelines:
                 - cds-uat
               tasks:
                 - exec:
-                   arguments:
-                    - -c
-                    - ls && ll && curl ifconfig.me
-                  command: /bin/bash
+                    arguments:
+                      - -c
+                      - ls && ll && curl ifconfig.me
+                    command: /bin/bash
                 - exec:
                     arguments:
                       - -c 
-                      - echo "Hello hii vishnu"
+                      - pwd
                     command: /bin/bash 
                     run_if: failed
                       
