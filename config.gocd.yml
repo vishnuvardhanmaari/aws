@@ -15,7 +15,7 @@ pipelines:
         git: git@github.com:vishnuvardhanmaari/actions.git           
         shallow_clone: false
         auto_update: true
-        branch: master
+        branch: vishnu
     stages:
       - first-stage:
           fetch_materials: true
@@ -30,14 +30,15 @@ pipelines:
               resources:
                 - cds-uat
               tasks:
-                  - exec:
-                      arguments:
-                        - -c
-                        - ls && ll && curl ifconfig.me
-                      command: /bin/bash
-                  - exec:
-                      arguments:
-                        -c 
-                        - pwd
-                      command: /bin/bash 
-                      run_if: failed
+                 - exec:
+                     arguments:
+                      - -c
+                      - ls && ll && curl ifconfig.me
+                    command: /bin/bash
+                - exec:
+                    arguments:
+                      -c 
+                      - pwd
+                    command: /bin/bash 
+                    run_if: failed
+                      
