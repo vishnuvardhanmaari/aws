@@ -44,12 +44,5 @@ pipelines:
                     command: /bin/bash 
                     run_if: failed
 
-parameters:
-      - name: NGINX_VERSION
-        type: dropdown
-        required: true
-        options:
-          - "1.10"
-          - "1.14"
-          - "1.15"
-                      
+
+
