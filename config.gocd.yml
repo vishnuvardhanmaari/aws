@@ -16,14 +16,7 @@ pipelines:
         shallow_clone: false
         auto_update: true
         branch: master
-    parameters:
-      - name: NGINX_VERSION
-        type: dropdown
-        required: true
-        options:
-          - "1.10"
-          - "1.14"
-          - "1.15"
+    
 
     stages:
       - first-stage:
@@ -50,4 +43,13 @@ pipelines:
                       - pwd
                     command: /bin/bash 
                     run_if: failed
+
+parameters:
+      - name: NGINX_VERSION
+        type: dropdown
+        required: true
+        options:
+          - "1.10"
+          - "1.14"
+          - "1.15"
                       
