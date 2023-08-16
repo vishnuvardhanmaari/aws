@@ -1,18 +1,18 @@
----
 format_version: 10
 environments:
   vishnuvardhan:
     pipelines:
-      - vishnuvardhan-pipeline        
+      - vishnuvardhan-pipeline
+
 pipelines:
   vishnuvardhan-pipeline:
     group: vishnu-group
-    label_template: ${COUNT}
+    label_template: "${COUNT}"
     lock_behavior: none
     display_order: -1
     materials:
       vishnu-integration:
-        git: git@github.com:vishnuvardhanmaari/actions.git           
+        git: git@github.com:vishnuvardhanmaari/actions.git
         shallow_clone: false
         auto_update: true
         branch: master
@@ -28,22 +28,21 @@ pipelines:
         clean_workspace: true
         approval:
           type: manual
-            allow_only_on_success: false
-          jobs:
-            deployment:
-              timeout: 0
-              resources:
-                - cds-uat
-              tasks:
+          allow_only_on_success: false
+        jobs:
+          deployment:
+            timeout: 0
+            resources:
+              - cds-uat
+            tasks:
+              - exec:
+                  arguments:
+                    - "-c"
+                    - "ls && ll && curl ifconfig.me"
+                  command: "/bin/bash"
                 - exec:
                     arguments:
-                      - -c
-                      - ls && ll && curl ifconfig.me
-                    command: /bin/bash
-                - exec:
-                    arguments:
-                      - -c 
+                      - "-c"
                       - pwd
-                    command: /bin/bash 
+                    command: "/bin/bash"
                     run_if: failed
-                      
