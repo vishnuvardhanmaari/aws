@@ -28,7 +28,7 @@ pipelines:
         clean_workspace: true
         approval:
           type: manual
-        allow_only_on_success: false
+          allow_only_on_success: false  # Correct indentation here
         jobs:
           deployment:
             timeout: 0
