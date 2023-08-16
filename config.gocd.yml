@@ -16,20 +16,13 @@ pipelines:
         shallow_clone: false
         auto_update: true
         branch: master
-     parameters:
-      - name: NGINX_VERSION
-        type: string
-        required: true
-        default: "1.14"
-    
-
     stages:
-      - first-stage:
-          fetch_materials: true
-          keep_artifacts: false
-          clean_workspace: true
-          approval:
-            type: manual
+      - name: first-stage
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: true
+        approval:
+          type: manual
             allow_only_on_success: false
           jobs:
             deployment:
@@ -40,7 +33,7 @@ pipelines:
                 - exec:
                     arguments:
                       - -c
-                      - " ls &&  curl ifconfig.me "
+                      - ls && ll && curl ifconfig.me
                     command: /bin/bash
                 - exec:
                     arguments:
@@ -48,6 +41,4 @@ pipelines:
                       - pwd
                     command: /bin/bash 
                     run_if: failed
-
-
-
+                      
