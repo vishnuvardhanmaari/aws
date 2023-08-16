@@ -16,6 +16,11 @@ pipelines:
         shallow_clone: false
         auto_update: true
         branch: master
+    parameters:
+      - name: NGINX_VERSION
+        type: string
+        required: true
+        default: "1.14"
     stages:
       - name: first-stage
         fetch_materials: true
