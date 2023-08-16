@@ -20,7 +20,7 @@ pipelines:
       - name: NGINX_VERSION
         type: string
         required: true
-        default: "1.14"
+        default: "one"
     stages:
       - name: first-stage
         fetch_materials: true
